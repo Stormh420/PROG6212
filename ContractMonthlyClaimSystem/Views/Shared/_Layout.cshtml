@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ContractMonthlyClaimSystem</title>
+
+    <!--Styles sheet import-->
+    <style>
+        /* Basic page reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensures the body takes up the full height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* The navbar styles */
+        .Nav {
+            
+            margin: 15px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(175, 222, 191);
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 5px;
+        }
+
+        .NavText {
+            font-size: 30px;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .NavLogo {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Content area */
+        .content {
+            flex: 1; /* Makes the content area fill the available space */
+            padding: 20px;
+        }
+
+        /* The footer styles */
+        .footer {
+            margin: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: rgb(175, 222, 191);
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 5px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .footerText {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar container-->
+    <header class="Nav">
+        <!--Displays the logo-->
+        <img src="~/images/Logo.png" alt="Logo" class="NavLogo" />
+        <!-- Displays the text -->
+        <div class="NavText">
+            <p>Contract Monthly Claim System</p>
+        </div>
+    </header>
+
+    <!-- Main content area where the page-specific content is rendered -->
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <!-- Footer section of the page -->
+    <footer class="footer">
+        <!-- Displays the text  -->
+        <div class="footerText">
+            <p>&copy; CopyRight of Storm Hendricks ST10038710</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

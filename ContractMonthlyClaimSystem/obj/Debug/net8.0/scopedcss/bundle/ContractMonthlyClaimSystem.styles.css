@@ -1,0 +1,10 @@
+/* _content/ContractMonthlyClaimSystem/Views/Shared/_Layout.cshtml.rz.scp.css */
+.Nav[b-c14umptbct] {
+    padding: 10px;
+    align-items:flex-start;
+    color: forestgreen;
+}
+.NavText[b-c14umptbct] {
+    font-size: 30px;
+    color: black;
+}
