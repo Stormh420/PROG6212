@@ -1,8 +1,73 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!--Styles-->
+<style>
+    /* Main container styling */
+    .main-container {
+        text-align: center;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    /* Heading styling */
+    .main-heading {
+        margin-bottom: 50px;
+        font-size: 40px;
+        padding-left: 20px;
+    }
+
+    /* Buttons holder styling */
+    .buttons-holder {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Individual button container styling */
+    .button-container {
+        margin: 50px;
+    }
+
+    /* Button styling */
+    .custom-button {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191); /* Corrected color format */
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .custom-button-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+    }
+</style>
+
+<!--Homepage main container-->
+<div class="main-container">
+    <!--The home page main text-->
+    <div class="main-heading">
+        <h1>Are you a manager or lecturer?</h1>
+    </div>
+
+    <!--Buttons holder-->
+    <div class="buttons-holder">
+        <!--The home page lecture button-->
+        <div class="button-container">
+            <button class="custom-button">
+                <p class="custom-button-text">Lecturer</p>
+            </button>
+        </div>
+
+        <!--The home page manager button-->
+        <div class="button-container">
+            <button class="custom-button">
+                <p class="custom-button-text">Manager</p>
+            </button>
+        </div>
+    </div>
 </div>
+
+

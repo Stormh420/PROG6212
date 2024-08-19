@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\ContractMonthlyClaimSystem",
-    "\\ContractMonthlyClaimSystem\\Views",
-    "\\ContractMonthlyClaimSystem\\Views\\Shared"
+    "\\ContractMonthlyClaimSystem\\Views"
   ],
-  "SelectedNode": "\\ContractMonthlyClaimSystem\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\ContractMonthlyClaimSystem\\ContractMonthlyClaimSystem.sln",
   "PreviewInSolutionExplorer": false
 }
