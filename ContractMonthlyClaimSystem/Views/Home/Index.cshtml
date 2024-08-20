@@ -12,7 +12,6 @@
     .main-heading {
         margin-bottom: 50px;
         font-size: 40px;
-        padding-left: 20px;
     }
 
     /* Buttons holder styling */
@@ -30,10 +29,12 @@
     .custom-button {
         width: fit-content;
         height: fit-content;
-        background-color: rgb(175, 222, 191); /* Corrected color format */
+        background-color: rgb(175, 222, 191);
         border: 2px solid black;
         border-radius: 10px;
         cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
     }
 
     .custom-button-text {
@@ -56,18 +57,19 @@
     <div class="buttons-holder">
         <!--The home page lecture button-->
         <div class="button-container">
-            <button class="custom-button">
+            <a asp-controller="Account" asp-action="Login" class="custom-button">
                 <p class="custom-button-text">Lecturer</p>
-            </button>
+            </a>
         </div>
 
         <!--The home page manager button-->
         <div class="button-container">
-            <button class="custom-button">
+            <a asp-controller="Account" asp-action="Login" class="custom-button">
                 <p class="custom-button-text">Manager</p>
-            </button>
+            </a>
         </div>
     </div>
 </div>
+
 
 

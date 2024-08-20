@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|c:\\users\\thund\\onedrive\\desktop\\visual studios 2\\prog6212\\contractmonthlyclaimsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T18:14:01.342Z",
-              "EditorCaption": ""
             }
           ]
         }

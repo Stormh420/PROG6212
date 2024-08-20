@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+<!--Styles-->
+<style>
+    /* Wrapper to center the main container and its contents */
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Main container styling */
+    .main-container {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 20px; /* Increased padding for better spacing */
+        text-align: center;
+        margin-bottom: 20px; /* Space between container and button */
+    }
+
+        /* Input fields styling */
+        .main-container input[type="text"],
+        .main-container input[type="password"] {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    /* Button styling */
+    .Button {
+        display: block;
+        margin: 0 auto; /* Center button horizontally */
+        padding: 10px 20px; /* Add padding for better appearance */
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        text-decoration: none; /* Pointer cursor on hover */
+    }
+
+        /* Button hover effect */
+        .Button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+    /* Register link and text in the same line */
+    .register-container {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+        .register-container p, .register-container a {
+            display: inline;
+            margin: 0;
+        }
+
+        .register-container a {
+            color: blue;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+
+</style>
+<!-- Wrapper to center the main container and button -->
+<div class="wrapper">
+    <!-- Login form container -->
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <div class="main-container">
+            <!-- The main text -->
+            <div class="main-text">
+                <h1>Login</h1>
+            </div>
+
+            <!-- Input fields -->
+            <div>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+
+            <!-- Register link in the same line as the text -->
+            <div class="register-container">
+                <p>Don't have an account?</p>
+                <a asp-controller="Account" asp-action="Register">
+                    <p>Register</p>
+                </a>
+            </div>
+
+            
+        </div>
+        <!-- Login Button -->
+        <button type="submit" class="Button">Login</button>
+    }
+</div>
+
+
+
+
+
+

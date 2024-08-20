@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<!--Style-->
+<style>
+    /* Wrapper to center the main container and its contents */
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Main container styling */
+    .main-container {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        /* Input fields styling */
+        .main-container input[type="text"],
+        .main-container input[type="password"],
+        .main-container input[type="email"] {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    /* Button styling */
+    .Button {
+        display: block;
+        margin: 0 auto; /* Center button horizontally */
+        padding: 10px 20px; /* Add padding for better appearance */
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        text-decoration: none; /* Pointer cursor on hover */
+    }
+
+        /* Button hover effect */
+        .Button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+    /* Register link and text in the same line */
+    .register-container {
+        margin-top: 20px;
+    }
+
+        .register-container a {
+            color: blue;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+    .checkBox {
+        margin-top: 20px;
+        text-align: left;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="main-container">
+        <!--The heading text-->
+        <h1>Register</h1>
+
+        <!-- Input fields -->
+        <div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+
+            <label for="psw1"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw1" required>
+
+            <label for="psw2"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="psw2" required>
+        </div>
+
+        <!-- the lecturer and manager -->
+        <div class="checkBox">
+            <label>
+                <input type="radio" checked="checked" name="radio">
+                Lecture
+            </label>
+            <label>
+                <input type="radio" name="radio">
+                Manager
+            </label>
+        </div>
+
+        <!-- Register link in a separate line below radio buttons -->
+        <div class="register-container">
+            <p>
+                Already have an account?
+                <a asp-controller="Account" asp-action="Login">Login</a>
+            </p>
+        </div>
+    </div>
+    <!-- Register Button -->
+    <button type="submit" class="Button">Register</button>
+</div>
+
+
+
