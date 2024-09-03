@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "MainNavManager";
+}
+<style>
+    /* Wrapper to center the main container and its contents */
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Individual button container styling */
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+    }
+
+    /* Button styling */
+    .custom-button {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .custom-button-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+    }
+</style>
+
+<div class="wrapper">
+    <!-- Buttons holder -->
+    <div class="buttons-holder">
+        <!-- Pending claims button -->
+        <div class="button-container">
+            <a asp-controller="Manager" asp-action="PendingClaims" class="custom-button">
+                <p class="custom-button-text">Pending Claims</p>
+            </a>
+        </div>
+
+        <!-- View all claims button -->
+        <div class="button-container">
+            <a asp-controller="Manager" asp-action="ViewAllClaims" class="custom-button">
+                <p class="custom-button-text">View all claims</p>
+            </a>
+        </div>
+
+        <!-- Back Button -->
+        <div class="button-container">
+            <a href="javascript:history.back()" class="custom-button">
+                <p class="custom-button-text">Back</p>
+            </a>
+        </div>
+    </div>
+</div>

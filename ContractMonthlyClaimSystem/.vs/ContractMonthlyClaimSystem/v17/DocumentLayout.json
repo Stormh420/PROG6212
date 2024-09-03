@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|c:\\users\\thund\\onedrive\\desktop\\visual studios 2\\prog6212\\contractmonthlyclaimsystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|c:\\users\\thund\\onedrive\\desktop\\visual studios 2\\prog6212\\contractmonthlyclaimsystem\\views\\manger\\mainmanger.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|solutionrelative:views\\manger\\mainmanger.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|c:\\users\\thund\\onedrive\\desktop\\visual studios 2\\prog6212\\contractmonthlyclaimsystem\\views\\manger\\viewallclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|solutionrelative:views\\manger\\viewallclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|c:\\users\\thund\\onedrive\\desktop\\visual studios 2\\prog6212\\contractmonthlyclaimsystem\\views\\manger\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|solutionrelative:views\\manger\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|c:\\users\\thund\\onedrive\\desktop\\visual studios 2\\prog6212\\contractmonthlyclaimsystem\\controllers\\mangercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53C01A48-8BC9-414B-A1FB-C028AD064A16}|ContractMonthlyClaimSystem.csproj|solutionrelative:controllers\\mangercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +30,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainManger.cshtml",
+              "DocumentMoniker": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Manger\\MainManger.cshtml",
+              "RelativeDocumentMoniker": "Views\\Manger\\MainManger.cshtml",
+              "ToolTip": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Manger\\MainManger.cshtml",
+              "RelativeToolTip": "Views\\Manger\\MainManger.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAC4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-01T11:19:23.09Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MangerController.cs",
+              "DocumentMoniker": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Controllers\\MangerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MangerController.cs",
+              "ToolTip": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Controllers\\MangerController.cs",
+              "RelativeToolTip": "Controllers\\MangerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T11:48:41.567Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -18,6 +67,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewAllClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Manger\\ViewAllClaims.cshtml",
+              "RelativeDocumentMoniker": "Views\\Manger\\ViewAllClaims.cshtml",
+              "ToolTip": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Manger\\ViewAllClaims.cshtml",
+              "RelativeToolTip": "Views\\Manger\\ViewAllClaims.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T11:52:19.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PendingClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Manger\\PendingClaims.cshtml",
+              "RelativeDocumentMoniker": "Views\\Manger\\PendingClaims.cshtml",
+              "ToolTip": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Views\\Manger\\PendingClaims.cshtml",
+              "RelativeToolTip": "Views\\Manger\\PendingClaims.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-02T11:51:50.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T11:49:23.43Z",
+              "EditorCaption": ""
             }
           ]
         }
