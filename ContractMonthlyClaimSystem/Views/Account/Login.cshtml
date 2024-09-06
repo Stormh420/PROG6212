@@ -1,29 +1,25 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Login";
 }
 <!--Styles-->
 <style>
-    /* Wrapper to center the main container and its contents */
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Main container styling */
     .main-container {
         width: fit-content;
         height: fit-content;
         background-color: rgb(175, 222, 191);
         border: 2px solid black;
         border-radius: 10px;
-        padding: 20px; /* Increased padding for better spacing */
+        padding: 20px;
         text-align: center;
-        margin-bottom: 20px; /* Space between container and button */
+        margin-bottom: 20px;
     }
 
-        /* Input fields styling */
         .main-container input[type="text"],
         .main-container input[type="password"] {
             display: block;
@@ -35,11 +31,10 @@
             border: 1px solid #ccc;
         }
 
-    /* Button styling */
     .Button {
         display: block;
-        margin: 0 auto; /* Center button horizontally */
-        padding: 10px 20px; /* Add padding for better appearance */
+        margin: 0 auto;
+        padding: 10px 20px;
         width: fit-content;
         height: fit-content;
         background-color: rgb(175, 222, 191);
@@ -47,15 +42,13 @@
         border-radius: 10px;
         cursor: pointer;
         font-size: 25px;
-        text-decoration: none; /* Pointer cursor on hover */
+        text-decoration: none;
     }
 
-        /* Button hover effect */
         .Button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049;
         }
 
-    /* Register link and text in the same line */
     .register-container {
         display: inline-block;
         margin-top: 20px;
@@ -71,8 +64,8 @@
             text-decoration: underline;
             margin-left: 5px;
         }
-
 </style>
+
 <!-- Wrapper to center the main container and button -->
 <div class="wrapper">
     <!-- Login form container -->
@@ -86,27 +79,24 @@
 
             <!-- Input fields -->
             <div>
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
             </div>
 
             <!-- Register link in the same line as the text -->
             <div class="register-container">
                 <p>Don't have an account?</p>
-                <a asp-controller="Account" asp-action="Register">
-                    <p>Register</p>
-                </a>
+                <a asp-controller="Account" asp-action="Register">Register</a>
             </div>
-
-            
         </div>
         <!-- Login Button -->
         <button type="submit" class="Button">Login</button>
     }
 </div>
+
 
 
 

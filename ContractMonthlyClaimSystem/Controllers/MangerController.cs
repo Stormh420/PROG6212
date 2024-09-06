@@ -4,22 +4,17 @@ namespace ContractMonthlyClaimSystem.Controllers
 {
     public class ManagerController : Controller
     {
-        // Get main manager navigation page
-        public IActionResult MainManager()
-        {
-            return View();
-        }
 
         // Get pending claims view
         public IActionResult PendingClaims()
         {
-            return View();
+            return View("~/Views/Manger/PendingClaims.cshtml");
         }
 
         // Get all the claims view 
         public IActionResult ViewAllClaims()
         {
-            return View();
+            return View("~/Views/Manger/ViewAllClaimsManger.cshtml");
         }
     }
 }

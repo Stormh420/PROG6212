@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZVxNYWluTGVjdHVyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/thund/OneDrive/Desktop/Visual studios 2/PROG6212/ContractMonthlyClaimSystem/Views/Lecture/SubmitClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZVxTdWJtaXRDbGFpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thund/OneDrive/Desktop/Visual studios 2/PROG6212/ContractMonthlyClaimSystem/Views/Lecture/ViewAllClaimLecture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZVxWaWV3QWxsQ2xhaW1MZWN0dXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thund/OneDrive/Desktop/Visual studios 2/PROG6212/ContractMonthlyClaimSystem/Views/Manger/MainManger.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuZ2VyXE1haW5NYW5nZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,8 +58,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuZ2VyXFBlbmRpbmdDbGFpbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thund/OneDrive/Desktop/Visual studios 2/PROG6212/ContractMonthlyClaimSystem/Views/Manger/ViewAllClaims.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuZ2VyXFZpZXdBbGxDbGFpbXMuY3NodG1s
+[C:/Users/thund/OneDrive/Desktop/Visual studios 2/PROG6212/ContractMonthlyClaimSystem/Views/Manger/ViewAllClaimsManger.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuZ2VyXFZpZXdBbGxDbGFpbXNNYW5nZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/thund/OneDrive/Desktop/Visual studios 2/PROG6212/ContractMonthlyClaimSystem/Views/Shared/Error.cshtml]

@@ -10,12 +10,22 @@ namespace ContractMonthlyClaimSystem.Controllers
             return View();
         }
 
-        // Get: Account/Register
+        // GET: Account/Register
         public IActionResult Register()
         {
             return View();
         }
-        
+
+        //Get: Manger/MainManger
+        public IActionResult MainManger() 
+        { 
+            return View("~/Views/Manger/MainManger.cshtml");
+        }
+
+        public IActionResult MainLecture() 
+        {
+            return View("~/Views/Lecture/MainLecture.cshtml");
+        }
 
         // POST: /Account/Login
         [HttpPost]
@@ -41,6 +51,6 @@ namespace ContractMonthlyClaimSystem.Controllers
             return username == "admin" && password == "password";
         }
     }
-
 }
+
 

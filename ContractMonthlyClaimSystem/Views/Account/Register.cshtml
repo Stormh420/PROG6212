@@ -3,14 +3,12 @@
 }
 <!--Style-->
 <style>
-    /* Wrapper to center the main container and its contents */
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Main container styling */
     .main-container {
         width: fit-content;
         height: fit-content;
@@ -22,7 +20,6 @@
         margin-bottom: 20px;
     }
 
-        /* Input fields styling */
         .main-container input[type="text"],
         .main-container input[type="password"],
         .main-container input[type="email"] {
@@ -35,11 +32,10 @@
             border: 1px solid #ccc;
         }
 
-    /* Button styling */
     .Button {
         display: block;
-        margin: 0 auto; /* Center button horizontally */
-        padding: 10px 20px; /* Add padding for better appearance */
+        margin: 0 auto;
+        padding: 10px 20px;
         width: fit-content;
         height: fit-content;
         background-color: rgb(175, 222, 191);
@@ -47,15 +43,13 @@
         border-radius: 10px;
         cursor: pointer;
         font-size: 25px;
-        text-decoration: none; /* Pointer cursor on hover */
+        text-decoration: none;
     }
 
-        /* Button hover effect */
         .Button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049;
         }
 
-    /* Register link and text in the same line */
     .register-container {
         margin-top: 20px;
     }
@@ -65,6 +59,7 @@
             text-decoration: underline;
             margin-left: 5px;
         }
+
     .checkBox {
         margin-top: 20px;
         text-align: left;
@@ -73,37 +68,36 @@
 
 <div class="wrapper">
     <div class="main-container">
-        <!--The heading text-->
         <h1>Register</h1>
 
         <!-- Input fields -->
         <div>
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
 
             <label for="email"><b>Email</b></label>
             <input type="email" placeholder="Enter Email" name="email" required>
 
-            <label for="psw1"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw1" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
 
-            <label for="psw2"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Confirm Password" name="psw2" required>
+            <label for="confirm-password"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="confirm-password" required>
         </div>
 
         <!-- the lecturer and manager -->
         <div class="checkBox">
             <label>
-                <input type="radio" checked="checked" name="radio">
+                <input type="radio" name="role" value="Lecture" checked="checked">
                 Lecture
             </label>
             <label>
-                <input type="radio" name="radio">
+                <input type="radio" name="role" value="Manager">
                 Manager
             </label>
         </div>
 
-        <!-- Register link in a separate line below radio buttons -->
+        <!-- Login link -->
         <div class="register-container">
             <p>
                 Already have an account?
@@ -114,6 +108,7 @@
     <!-- Register Button -->
     <button type="submit" class="Button">Register</button>
 </div>
+
 
 
 
