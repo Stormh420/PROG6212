@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\wwwroot\\uploads\\Pas.png",
+      "PackagePath": "staticwebassets\\uploads\\Pas.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ContractMonthlyClaimSystem.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

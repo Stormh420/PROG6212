@@ -1,4 +1,40 @@
-﻿
-@{
-    ViewData["Title"] = "ViewAllClaimLecture";
-}
+﻿@model List<ContractMonthlyClaimSystem.Models.Claim>
+
+<h1>All Submitted Claims</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Claim ID</th>
+            <th>Lecturer Name</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Date Submitted</th>
+            <th>Notes</th>
+            <th>Supporting Document</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.ClaimId</td>
+                <td>@claim.LectureName</td>
+                <td>@claim.HoursWorked</td>
+                <td>@claim.HourlyRate</td>
+                <td>@claim.Total</td>
+                <td>@claim.Status</td>
+                <td>@claim.DateSubmitted.ToString("g")</td>
+                <td>@claim.Notes</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(claim.SupportingDocumentPath))
+                    {
+                        <a href="@Url.Content("~/uploads/" + System.IO.Path.GetFileName(claim.SupportingDocumentPath))">Download</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

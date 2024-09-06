@@ -13,30 +13,52 @@
         width: fit-content;
         height: fit-content;
         background-color: rgb(175, 222, 191);
-        border-radius: 10px; /* Removed the border */
+        border-radius: 10px;
         padding: 20px;
         text-align: center;
         margin-bottom: 20px;
+        border: 2px solid black;
     }
 
     .input {
         display: flex;
-        flex-direction: column; /* Ensures input is under label */
+        flex-direction: column;
         width: 100%;
         margin: 10px 0;
         padding: 10px;
         box-sizing: border-box;
         border-radius: 5px;
-        border: none; /* Removed border around input */
+        border: none;
     }
 
     input, textarea {
         padding: 10px;
         width: 100%;
         border-radius: 5px;
-        border: 1px solid #ccc; /* Add border for inputs only */
+        border: 1px solid #ccc;
+    }
+    /* Button styling */
+    .custom-button {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
     }
 
+    .custom-button-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+    }
+
+    /* Button styling */
     .Button {
         display: block;
         margin: 0 auto;
@@ -49,6 +71,7 @@
         cursor: pointer;
         font-size: 25px;
         text-decoration: none;
+        margin-top: 20px;
     }
 
         .Button:hover {
@@ -58,14 +81,15 @@
 
 <!-- Wrapper to center the main container and button -->
 <div class="wrapper">
-    <div class="main-container">
-        <!-- The main text -->
-        <div class="main-text">
-            <h1>Submit Claim</h1>
-        </div>
+    <!-- The form starts here -->
+    <form method="post" enctype="multipart/form-data" asp-action="SubmitClaims">
+        <div class="main-container">
+            <!-- The main text -->
+            <div class="main-text">
+                <h1>Submit Claim</h1>
+            </div>
 
-        <!-- Input fields -->
-        <form method="post" enctype="multipart/form-data" asp-action="SubmitClaims">
+            <!-- Input fields -->
             <div class="input">
                 <label for="lectureName"><b>Lecture Name</b></label>
                 <input type="text" id="lectureName" placeholder="Enter Lecturer's name" name="LectureName" required>
@@ -95,12 +119,17 @@
                 <label for="fileUpload"><b>Upload Supporting Document</b></label>
                 <input type="file" id="fileUpload" name="SupportingDocument" accept=".pdf,.doc,.docx,.jpg,.png" required>
             </div>
+        </div>
 
-        </form>
-    </div>
+        <!-- Submit Button outside of main-container but inside form -->
+        <button type="submit" class="Button">Submit Claim</button>
+    </form>
 
-    <button type="submit" class="Button">Submit Claim</button>
-
+    <!-- Back Button -->
+        <a href="javascript:history.back()" class="custom-button">
+            <p class="custom-button-text">Back</p>
+        </a>
+   
 </div>
 
 <script>
