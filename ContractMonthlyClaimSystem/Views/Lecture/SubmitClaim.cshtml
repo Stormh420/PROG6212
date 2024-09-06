@@ -1,4 +1,118 @@
-﻿
-@{
-    ViewData["Title"] = "SubmitClaim";
+﻿@{
+    ViewData["Title"] = "Submit Claim";
 }
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border-radius: 10px; /* Removed the border */
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column; /* Ensures input is under label */
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none; /* Removed border around input */
+    }
+
+    input, textarea {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc; /* Add border for inputs only */
+    }
+
+    .Button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+        .Button:hover {
+            background-color: #45a049;
+        }
+</style>
+
+<!-- Wrapper to center the main container and button -->
+<div class="wrapper">
+    <div class="main-container">
+        <!-- The main text -->
+        <div class="main-text">
+            <h1>Submit Claim</h1>
+        </div>
+
+        <!-- Input fields -->
+        <form method="post" enctype="multipart/form-data" asp-action="SubmitClaims">
+            <div class="input">
+                <label for="lectureName"><b>Lecture Name</b></label>
+                <input type="text" id="lectureName" placeholder="Enter Lecturer's name" name="LectureName" required>
+            </div>
+
+            <div class="input">
+                <label for="hoursWorked"><b>Hours Worked</b></label>
+                <input type="number" id="hoursWorked" name="HoursWorked" placeholder="Enter hours worked" oninput="calculateTotal()" required>
+            </div>
+
+            <div class="input">
+                <label for="hourlyRate"><b>Hourly Rate</b></label>
+                <input type="number" id="hourlyRate" name="HourlyRate" placeholder="Enter hourly rate" oninput="calculateTotal()" required>
+            </div>
+
+            <div class="input">
+                <label for="total"><b>Total</b></label>
+                <input type="number" id="total" name="Total" readonly>
+            </div>
+
+            <div class="input">
+                <label for="notes"><b>Additional Notes</b></label>
+                <textarea id="notes" name="Notes" placeholder="Enter any additional notes"></textarea>
+            </div>
+
+            <div class="input">
+                <label for="fileUpload"><b>Upload Supporting Document</b></label>
+                <input type="file" id="fileUpload" name="SupportingDocument" accept=".pdf,.doc,.docx,.jpg,.png" required>
+            </div>
+
+        </form>
+    </div>
+
+    <button type="submit" class="Button">Submit Claim</button>
+
+</div>
+
+<script>
+    function calculateTotal() {
+        var hoursWorked = document.getElementById("hoursWorked").value;
+        var hourlyRate = document.getElementById("hourlyRate").value;
+        var total = document.getElementById("total");
+
+        if (hoursWorked && hourlyRate) {
+            total.value = (hoursWorked * hourlyRate).toFixed(2);
+        } else {
+            total.value = 0;
+        }
+    }
+</script>
