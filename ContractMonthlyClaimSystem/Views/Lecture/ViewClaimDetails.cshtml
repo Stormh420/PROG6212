@@ -1,0 +1,42 @@
+﻿@model ContractMonthlyClaimSystem.Models.Claim
+
+<div class="main-container">
+    <h2>Claim Details for @Model.LectureName</h2>
+    <table class="claim-table">
+        <tr>
+            <td><strong>Claim ID:</strong></td>
+            <td>@Model.ClaimId</td>
+        </tr>
+        <tr>
+            <td><strong>Lecture Name:</strong></td>
+            <td>@Model.LectureName</td>
+        </tr>
+        <tr>
+            <td><strong>Hours Worked:</strong></td>
+            <td>@Model.HoursWorked</td>
+        </tr>
+        <tr>
+            <td><strong>Hourly Rate:</strong></td>
+            <td>@Model.HourlyRate</td>
+        </tr>
+        <tr>
+            <td><strong>Total:</strong></td>
+            <td>@Model.Total</td>
+        </tr>
+        <tr>
+            <td><strong>Notes:</strong></td>
+            <td>@Model.Notes</td>
+        </tr>
+        <tr>
+            <td><strong>Status:</strong></td>
+            <td>@Model.Status</td>
+        </tr>
+        @if (!string.IsNullOrEmpty(Model.SupportingDocumentPath))
+        {
+            <tr>
+                <td><strong>Supporting Document:</strong></td>
+                <td><a href="@Url.Content($"~/uploads/{Path.GetFileName(Model.SupportingDocumentPath)}")" target="_blank">View Document</a></td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,40 +1,117 @@
 ﻿@model List<ContractMonthlyClaimSystem.Models.Claim>
 
-<h1>All Submitted Claims</h1>
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-<table>
-    <thead>
-        <tr>
-            <th>Claim ID</th>
-            <th>Lecturer Name</th>
-            <th>Hours Worked</th>
-            <th>Hourly Rate</th>
-            <th>Total</th>
-            <th>Status</th>
-            <th>Date Submitted</th>
-            <th>Notes</th>
-            <th>Supporting Document</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var claim in Model)
-        {
-            <tr>
-                <td>@claim.ClaimId</td>
-                <td>@claim.LectureName</td>
-                <td>@claim.HoursWorked</td>
-                <td>@claim.HourlyRate</td>
-                <td>@claim.Total</td>
-                <td>@claim.Status</td>
-                <td>@claim.DateSubmitted.ToString("g")</td>
-                <td>@claim.Notes</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(claim.SupportingDocumentPath))
+    .main-container {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 2px solid black;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    /* Table styling */
+    table.claim-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px; /* Adds space between heading and table */
+    }
+
+    th, td {
+        padding: 15px; /* Adds space within the cells */
+        border-top: 1px solid black; /* Adds a top border to each row */
+        border-bottom: 1px solid black; /* Adds a bottom border to each row */
+        text-align: center;
+        border-left: none; /* Removes the left border */
+        border-right: none; /* Removes the right border */
+    }
+
+    th {
+        background-color: rgb(175, 222, 191); /* Optional: light background for the header */
+        border-top: none; /* Remove top border for the header */
+    }
+
+    td {
+        background-color: rgb(175, 222, 191); /* Optional: same background for table rows */
+        font-size: 20px;
+    }
+
+    /* Button styling */
+    .custom-button {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .custom-button-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+    }
+
+    .view-btn {
+        font-size: 20px;
+        background-color: rgb(217, 217,217);
+        padding: 5px;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="main-container">
+        <h2>Pending Claims</h2>
+        <table class="claim-table">
+
+            <tbody>
+                <!-- Check if Model has any claims -->
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var claim in Model)
                     {
-                        <a href="@Url.Content("~/uploads/" + System.IO.Path.GetFileName(claim.SupportingDocumentPath))">Download</a>
+                        <tr>
+                            <td>Claim: @claim.ClaimId</td>
+                            <td>Status: @claim.Status</td>
+                            <td>
+                                <form asp-controller="Lecture" asp-action="ViewClaim" method="post">
+                                    <input type="hidden" name="ClaimId" value="@claim.ClaimId" />
+                                    <button type="submit" class="view-btn">View</button>
+                                </form>
+                            </td>
+                        </tr>
                     }
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                }
+                else
+                {
+                    <!-- Display message if no data -->
+                    <tr>
+                        <td colspan="3">No pending claims available.</td> <!-- Adjusted colspan to 3 -->
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Back Button -->
+    <a href="javascript:history.back()" class="custom-button">
+        <p class="custom-button-text">Back</p>
+    </a>
+</div>
+
+

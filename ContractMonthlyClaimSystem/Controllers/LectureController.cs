@@ -8,14 +8,9 @@ using ContractMonthlyClaimSystem.Services;
 
 namespace ContractMonthlyClaimSystem.Controllers
 {
-    public class LectureController : Controller
+    public class LectureController(ClaimService claimService) : Controller
     {
-        private readonly ClaimService _claimService;
-
-        public LectureController(ClaimService claimService)
-        {
-            _claimService = claimService;
-        }
+        private readonly ClaimService _claimService = claimService;
 
         // Get the submit claims view
         public IActionResult SubmitClaims()
@@ -69,7 +64,25 @@ namespace ContractMonthlyClaimSystem.Controllers
             var claims = _claimService.GetAllClaims();
             return View(claims); // Pass claims data to the view
         }
+
+        // New Action to view a single claim's details
+        [HttpPost]
+        public IActionResult ViewClaim(int ClaimId)
+        {
+            // Fetch the claim by ID
+            var claim = _claimService.GetAllClaims().FirstOrDefault(c => c.ClaimId == ClaimId);
+
+            // Check if the claim exists
+            if (claim == null)
+            {
+                return NotFound();
+            }
+
+            // Pass the claim to the view
+            return View("~/Views/Lecture/ViewClaimDetails.cshtml", claim);
+        }
     }
 }
+
 
 
