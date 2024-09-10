@@ -22,6 +22,9 @@ namespace ContractMonthlyClaimSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> SubmitClaims(string LectureName, int HoursWorked, decimal HourlyRate, string Notes, IFormFile SupportingDocument)
         {
+            // Set file size limit (5MB in this example)
+            long fileSizeLimit = 5 * 1024 * 1024;
+
             // Calculate total
             decimal total = HoursWorked * HourlyRate;
 
@@ -29,6 +32,13 @@ namespace ContractMonthlyClaimSystem.Controllers
             string? filePath = null;
             if (SupportingDocument != null && SupportingDocument.Length > 0)
             {
+                if (SupportingDocument.Length > fileSizeLimit)
+                {
+                    // Return an error if file exceeds the size limit
+                    ModelState.AddModelError("File", "The uploaded file exceeds the allowed size of 5MB.");
+                    return View("~/Views/Lecture/SubmitClaim.cshtml"); // Return to the form with an error message
+                }
+
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
                 Directory.CreateDirectory(uploadsFolder); // Ensure directory exists
                 filePath = Path.Combine(uploadsFolder, SupportingDocument.FileName);
@@ -58,6 +68,7 @@ namespace ContractMonthlyClaimSystem.Controllers
             return RedirectToAction("ViewAllClaimLecture");
         }
 
+
         // Get the view all claims view
         public IActionResult ViewAllClaimLecture()
         {
@@ -81,6 +92,9 @@ namespace ContractMonthlyClaimSystem.Controllers
             // Pass the claim to the view
             return View("~/Views/Lecture/ViewClaimDetails.cshtml", claim);
         }
+
+
+
     }
 }
 

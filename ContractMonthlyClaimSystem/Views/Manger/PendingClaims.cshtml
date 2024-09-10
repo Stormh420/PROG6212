@@ -1,4 +1,120 @@
-﻿
-@{
-    ViewData["Title"] = "PendingClaims";
-}
+﻿@model List<ContractMonthlyClaimSystem.Models.Claim>
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 2px solid black;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    /* Table styling */
+    table.claim-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px; /* Adds space between heading and table */
+    }
+
+    th, td {
+        padding: 15px; /* Adds space within the cells */
+        border-top: 1px solid black; /* Adds a top border to each row */
+        border-bottom: 1px solid black; /* Adds a bottom border to each row */
+        text-align: center;
+        border-left: none; /* Removes the left border */
+        border-right: none; /* Removes the right border */
+    }
+
+    th {
+        background-color: rgb(175, 222, 191); /* Optional: light background for the header */
+        border-top: none; /* Remove top border for the header */
+    }
+
+    td {
+        background-color: rgb(175, 222, 191); /* Optional: same background for table rows */
+        font-size: 20px;
+    }
+
+    /* Button styling */
+    .custom-button {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(175, 222, 191);
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .custom-button-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+    }
+
+</style>
+<div class="wrapper">
+
+<h2>Pending Claims</h2>
+
+<table class="claim-table">
+    <thead>
+        <tr>
+            <th>Claim ID</th>
+            <th>Lecture Name</th>
+            <th>Total</th>
+            <th>Approve or Denied</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.ClaimId</td>
+                    <td>@claim.LectureName</td>
+                    <td>@claim.Total</td>
+                    <td>
+                        <form asp-controller="Manager" asp-action="ApproveClaim" method="post" style="display:inline;">
+                            <input type="hidden" name="ClaimId" value="@claim.ClaimId" />
+                            <button type="submit" class="approve-btn">Approve</button>
+                        </form>
+                        <form asp-controller="Manager" asp-action="DenyClaim" method="post" style="display:inline;">
+                            <input type="hidden" name="ClaimId" value="@claim.ClaimId" />
+                            <button type="submit" class="deny-btn">Deny</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">No pending claims.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+    <!-- Back Button -->
+    <a href="javascript:history.back()" class="custom-button">
+        <p class="custom-button-text">Back</p>
+    </a>
+</div>

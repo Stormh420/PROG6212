@@ -76,32 +76,31 @@
 
 <div class="wrapper">
     <div class="main-container">
-        <h2>Pending Claims</h2>
-        <table class="claim-table">
-
+        <h2>My Claims</h2>
+        <<table class="claim-table">
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
             <tbody>
-                <!-- Check if Model has any claims -->
                 @if (Model != null && Model.Any())
                 {
                     @foreach (var claim in Model)
                     {
                         <tr>
-                            <td>Claim: @claim.ClaimId</td>
-                            <td>Status: @claim.Status</td>
-                            <td>
-                                <form asp-controller="Lecture" asp-action="ViewClaim" method="post">
-                                    <input type="hidden" name="ClaimId" value="@claim.ClaimId" />
-                                    <button type="submit" class="view-btn">View</button>
-                                </form>
-                            </td>
+                            <td>@claim.ClaimId</td>
+                            <td>@claim.Status</td>
+                            <td>@claim.Total</td>
                         </tr>
                     }
                 }
                 else
                 {
-                    <!-- Display message if no data -->
                     <tr>
-                        <td colspan="3">No pending claims available.</td> <!-- Adjusted colspan to 3 -->
+                        <td colspan="3">No claims available.</td>
                     </tr>
                 }
             </tbody>
