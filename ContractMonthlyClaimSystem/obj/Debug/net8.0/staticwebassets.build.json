@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k4rawBwKhT++ZftjG3xhPfZoF2023hpmdxLR62Q69S8=",
+  "Hash": "SVffuxRUT88+HQ1lJS4WOADCxOxPp6a2Dy1rXdv0pHY=",
   "Source": "ContractMonthlyClaimSystem",
   "BasePath": "_content/ContractMonthlyClaimSystem",
   "Mode": "Default",
@@ -1174,6 +1174,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\wwwroot\\uploads\\database + sever deployment.png",
+      "SourceId": "ContractMonthlyClaimSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\wwwroot\\",
+      "BasePath": "_content/ContractMonthlyClaimSystem",
+      "RelativePath": "uploads/database + sever deployment.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\database + sever deployment.png"
     },
     {
       "Identity": "C:\\Users\\thund\\OneDrive\\Desktop\\Visual studios 2\\PROG6212\\ContractMonthlyClaimSystem\\wwwroot\\uploads\\Pas.png",

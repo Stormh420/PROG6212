@@ -4,14 +4,9 @@ using ContractMonthlyClaimSystem.Models;
 
 namespace ContractMonthlyClaimSystem.Controllers
 {
-    public class ManagerController : Controller
+    public class ManagerController(ClaimService claimService) : Controller
     {
-        private readonly ClaimService _claimService;
-
-        public ManagerController(ClaimService claimService)
-        {
-            _claimService = claimService;
-        }
+        private readonly ClaimService _claimService = claimService;
 
         // Approve the claim
         public IActionResult ApproveClaim(int ClaimId)

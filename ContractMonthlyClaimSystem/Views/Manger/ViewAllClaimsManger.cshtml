@@ -77,14 +77,17 @@
 
 <div class="wrapper">
     <div class="main-container">
-        <h2>Pending Claims </h2>
-        <<table class="claim-table">
+        <h2>My Claims</h2>
+        <table class="claim-table">
             <thead>
                 <tr>
                     <th>Claim ID</th>
-                    <th>Status</th>
+                    <th>Name</th>
+                    <th>HoursWorked</th>
+                    <th>HourlyRate</th>
                     <th>Total</th>
-                    
+                    <th>Date and Time Submited</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -94,8 +97,12 @@
                     {
                         <tr>
                             <td>@claim.ClaimId</td>
-                            <td>@claim.Status</td>
+                            <td>@claim.LectureName</td>
+                            <td>@claim.HoursWorked</td>
+                            <td>@claim.HourlyRate</td>
                             <td>@claim.Total</td>
+                            <td>@claim.DateSubmitted</td>
+                            <td>@claim.Status</td>
                         </tr>
                     }
                 }
